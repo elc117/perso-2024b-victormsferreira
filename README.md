@@ -4,6 +4,8 @@ Advent of Code é um desafio anual no qual, durante os dias 1 até 25 de dezembr
 
 Para esse trabalho, decidi realizar os primeiros 4 dias + a primeira parte do dia 5. Uma implementação da segunda parte do dia 5 foi escrita, porém ela demoraria horas (possivelmente mais de um dia) para executar. Além disso, também foram feitas implementações dos dias 1 e 2 em Python, como uma forma de comparar a implementação em linguagens funcionais com em linguagens imperativas.
 
+O texto de cada desafio em íntegra em  [DESAFIOS.md](DESAFIOS.md).
+
 ## Dia 1
 ### Parte 1
 O primeiro desafio involve apenas a leitura de strings do arquivo, achar o primeiro e último digítos de cada string, ler eles como um número e realizar a soma desses. 
