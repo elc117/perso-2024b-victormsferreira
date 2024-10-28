@@ -48,3 +48,11 @@ A parte 2 é o primeiro desafio onde uma solução óbvia se torna extremamente 
 Por isso, ao invés de calcular cada carta nova individualmente, definimos uma função `getTotalCards :: [(Int, [Int], [Int])] -> [Int] -> [Int]`. Essa função recebe além da lista de cartas uma lista de cópias de cada carta, e recursivamente passa por cada carta e adiciona o número de cópias dela a cada número de cópias das cartas que ela ganha, retornando no final a lista com o número total de cópias de cada carta, e para resolver a parte 2 então é necessário apenas somar toda essa lista através de `sum`
 
 ## Dia 5
+### Parte 1
+Além das funções de parsing, são definidas as funções:
+`valueInRange :: Int -> (Int, Int, Int) -> Bool`: Que retorna se um valor está dentro do range de um mapping
+`mapping :: Int -> [(Int, Int, Int)]  -> Int`: Dado um valor de origem e uma lista de mapeamentos de origem para destino, verifica se o valor origem está dentro de qualquer um desses mapeamentos, e se for retorna o valor mapeado por esse, e se não, retorna o valor original
+`seedToLocation :: [(Int, Int, Int)] -> [(Int, Int, Int)] -> [(Int, Int, Int)] -> [(Int, Int, Int)]  -> [(Int, Int, Int)] -> [(Int, Int, Int)] -> [(Int, Int, Int)] -> Int -> Int`: Recebe todos os mapeamentos definidos no input do desafio, e mapeia desde o valor original de semente até o valor final de localização
+Para resolver a parte 1 então apenas mapeamos as sementes lidas originalmente pelos mappings lidos até a localização, e retornamos a localização mínima através da função `minimum`
+### Parte 2
+Na parte 2, a solução mais óbvia é a de, após ler os ranges das sementes, simplesmente adicionar todas as sementes dos ranges em uma lista e realizar a solução da parte 1 com essa nova lista. Devido aos grandes números dados no input, há uma quantidade gigante de sementes e portanto esse código demoraria horas ou mais de um dia para executar. Uma solução mais eficiente involve comparar e dividir ranges inteiros de forma a mapear apenas os ranges ao invés de cada semente individual. Parte do código dessa solução está comentado no arquivo, porém não consegui termina-la a tempo da entrega.
